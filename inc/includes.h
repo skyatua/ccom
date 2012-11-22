@@ -8,11 +8,11 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#include "chs.h"
+#include "CHS.h"
 #include "connect.h"
 #include "main.h"
-#include "terabus.h"
-#include "uartdriver.h"
-#include "uartmanager.h"
+#include "Terabus.h"
+#include "UartDriver.h"
+#include "UartManager.h"
 
 #endif

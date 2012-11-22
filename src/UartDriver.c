@@ -182,7 +182,7 @@ if (USART_CHANNEL_0 == descriptor->channel)
   usart0.TxCallback=descriptor->txCallback;  
   usart0.RxCallback=descriptor->rxCallback;   
   
-  usart6.hSerial = -1;
+  usart0.hSerial = -1;
   
   int hSerial = open("/dev/ttyAMA0", O_RDWR | O_NOCTTY | O_NDELAY);
   if (hSerial == -1)
