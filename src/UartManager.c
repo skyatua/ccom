@@ -14,6 +14,9 @@ void UART_RxEvent(uint8_t *len);
 
 void StartUartManager(void)
 {
+	
+UART_Descriptor.channel = USART_CH_NOINIT;
+
 #ifdef __MSPX__	
 DE_make_out();  
 DE_clr();  

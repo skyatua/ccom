@@ -13,6 +13,7 @@
 
 typedef enum
 {
+USART_CH_NOINIT	 = -1,
 USART_CHANNEL_0  = 0x00,
 USART_CHANNEL_1  = 0x01,
 }channel_t;
