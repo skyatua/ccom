@@ -43,6 +43,21 @@ UART_Descriptor.mode         = RS485_Mode;
 UART_Descriptor.rxBuffSize   = sizeof(_RxBuff);
 #endif
 
+#ifdef __LINX__
+UART_Descriptor.channel      = USART_CHANNEL_0;
+UART_Descriptor.baudrate     = USART_BAUDRATE_9600;
+UART_Descriptor.dataLength   = USART_DATA8;
+UART_Descriptor.stopbits     = USART_STOPBIT_1;
+UART_Descriptor.parity       = USART_PARITY_NONE;
+UART_Descriptor.flowControl  = USART_FLOW_CONTROL_NONE;
+
+UART_Descriptor.txCallback   = UART_TxConfirm;
+UART_Descriptor.rxCallback   = UART_RxEvent;
+UART_Descriptor.rxBuff       = _RxBuff;
+UART_Descriptor.mode         = RS485_Mode;
+UART_Descriptor.rxBuffSize   = sizeof(_RxBuff);
+
+#endif
 OpenUsart(&UART_Descriptor);
 }
 
